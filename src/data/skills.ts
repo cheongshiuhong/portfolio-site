@@ -1,7 +1,7 @@
 export const skillCategories = {
-  'programming': {
-    slug: 'programming',
-    title: 'Programming',
+  'tech': {
+    slug: 'tech',
+    title: 'Tech',
     color: 'green',
   },
   'mathstats': {
@@ -19,27 +19,27 @@ export const skillCategories = {
 export const skills = {
   'python': {
     title: 'Python',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/python_logo.png',
   },
   'numpy': {
     title: 'NumPy',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/numpy_logo.png'
   },
   'pandas': {
     title: 'Pandas',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/pandas_logo.png',
   },
   'matplotlib': {
     title: 'Matplotlib',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/matplotlib_logo.png',
   },  
   'scipy': {
     title: 'SciPy',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/scipy_logo.png',
   },
   'modern-portfolio-theory': {
@@ -52,24 +52,34 @@ export const skills = {
     category: skillCategories.finance,
     icons: '/media/images/equity_valuation_logo.png',
   },
+  'sql': {
+    title: 'SQL',
+    category: skillCategories.tech,
+    icon: '/media/images/sql_logo.png',
+  },
   'javascript': {
     title: 'JavaScript',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/javascript_logo.png',
+  },
+  'typescript': {
+    title: 'TypeScript',
+    category: skillCategories.tech,
+    icon: '/media/images/typescript_logo.png',
   },
   'html': {
     title: 'HTML',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/html_logo.png',
   },
   'css': {
     title: 'CSS',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/css_logo.png',
   },
   'eel': {
     title: 'Eel',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/eel_logo.png',
   },
   'machine-learning': {
@@ -79,52 +89,57 @@ export const skills = {
   },
   'pytorch': {
     title: 'PyTorch',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/pytorch_logo.png',
   },
   'keras': {
     title: 'Keras',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/keras_logo.png',
   },
   'docker': {
     title: 'Docker',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/docker_logo.png',
   },
   'django': {
     title: 'Django',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/django_logo.png',
   },
   'celery': {
     title: 'Celery',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/celery_logo.png',
   },
   'react-js': {
     title: 'React.js',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/reactjs_logo.png',
   },
   'next-js': {
     title: 'Next.js',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/nextjs_logo.png',
   },
   'material-ui': {
     title: 'Material-UI',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/material_ui_logo.png',
   },
   'google-api': {
     title: 'Google APIs',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/google_api_logo.png',
   },
   'graphql': {
     title: 'GraphQL',
-    category: skillCategories.programming,
+    category: skillCategories.tech,
     icon: '/media/images/graphql_logo.png',
   },
+  'spss': {
+    title: 'SPSS',
+    category: skillCategories.tech,
+    icon: '/media/images/spss_logo.png',
+  }
 }

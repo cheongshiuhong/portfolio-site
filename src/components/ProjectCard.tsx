@@ -68,9 +68,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       {
         mounted &&   
         <motion.div
-          initial={{ scale: 0.5 }}
+          initial={{ scale: 0.3 }}
           animate={{ scale: 1 }}
-          exit={{ scale: 0.1, transition: {duration: .2} }}
+          exit={{ scale: 0.1, transition: {duration: .2 } }}
           whileHover={{ scale: [1, 1.08, 1.06], transition: { duration: .3 }}}
           whileTap={{ scale: 0.8, transition: { duration: .1 }}}
           drag='x'
@@ -107,6 +107,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                         color={skill.category.color}
                       />
                     ))
+                  }
+                  {
+                    project.skills.length > project.skillsToShow && <>&#8230;</>
                   }
                 </div>
               </CardContent>

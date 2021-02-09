@@ -4,6 +4,7 @@ import Link  from'next/link'
 import Error from 'next/error'
 import CustomHead from '@/components/CustomHead'
 import Badge from '@/components/Badge'
+import ImageLink from '@/components/ImageLink'
 import { ExperienceProps } from '@/interfaces/experiences'
 import { projects } from '@/data/projects'
 import { experiences } from '@/data/experiences'
@@ -68,10 +69,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '12pt',
     marginTop: '12px',
     marginBottom: '12px',
+    lineHeight: '28px',
   },
   chips: {
     '& > *': {
-      marginRight: theme.spacing(0.5),
+      marginRight: theme.spacing(0.75),
+      marginBottom: theme.spacing(0.75),
     },
   },
   rightArea: {
@@ -230,13 +233,11 @@ export default function Experience({ experience }: ExperiencePageProps) {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <motion.div
-                      whileHover={{ scale: [1, 1.08, 1.05], transition: { duration: .3 } }}
-                    >
+                    <ImageLink>
                       <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${experience.title} - ${file.title}`}>
                         <img src={file.thumbnail} className={classes.fileImage} />
                       </a>
-                    </motion.div>
+                    </ImageLink>
                   </Grid>
                 </Grid>
               ))
@@ -263,15 +264,17 @@ export default function Experience({ experience }: ExperiencePageProps) {
                       </Typography>
                     </Grid>
                     <Grid item>
-                      <motion.div
-                        whileHover={{ scale: [1, 1.08, 1.05], transition: { duration: .3 } }}
-                      >
+                      <ImageLink exitOnMount>
                         <Link href={`/projects/${project.slug}`}>
                           <a aria-label={`${experience.title} - ${project.title}`}>
-                            <img src={(theme.palette.type === 'dark') && project.darkModeImage || project.image} className={classes.fileImage} />
+                            <img 
+                              src={(theme.palette.type === 'dark') && project.darkModeImage || project.image} 
+                              alt={`${experience.title} - ${project.title}`}
+                              className={classes.fileImage} 
+                            />
                           </a>
                         </Link>
-                      </motion.div>
+                      </ImageLink>
                     </Grid>
                   </Grid>
                 ))

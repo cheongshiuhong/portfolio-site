@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
+import ImageLink from '@/components/ImageLink'
 import { pages } from '@/data/pages'
 
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
@@ -115,10 +116,10 @@ export default function Home() {
         <Grid item className={classes.interests}>
           <Typography 
             component='span' 
-            onClick={() => {router.push({pathname: '/projects', query: {tag: 'programming'}})}}
+            onClick={() => {router.push({pathname: '/projects', query: {tag: 'tech'}})}}
             className={classes.interestText} 
             >
-            Programming
+            Tech
           </Typography>
           <Typography component='span'>
             &ensp;|&ensp;
@@ -178,19 +179,13 @@ export default function Home() {
           <Grid item container justify='center' spacing={2} className={classes.navigators}>
             {
               pages.filter(page => page.href !== '/').map(page => (
-                <Grid key={page.text} item container justify='center' xs={6} sm={4} lg={2}>
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.3}}
-                    whileTap={{ scale: 0.6 }}
-                    exit={{ scale: 0 }}
-                  >
+                <Grid key={page.text} item container justify='center' xs={6} sm={3} lg={2}>
+                  <ImageLink exitOnMount>
                     <Avatar src='/media/images/shiuhong.jpg' className={classes.navigator__avatar} onClick={() => router.push(page.href)}/>
                     <Typography align='center' className={classes.navigator__text}>
                       {page.text}
                     </Typography>
-                  </motion.div>
+                  </ImageLink>
                 </Grid>
               ))
             }

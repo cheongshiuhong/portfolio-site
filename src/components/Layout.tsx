@@ -19,7 +19,7 @@ import { motion } from 'framer-motion'
 const appBarHeight = 50
 const drawerWidth = 320
 const drawerConfigHeight = 40
-const drawerFooterHeight = 50
+const drawerFooterHeight = 60
 
 const useStyles = makeStyles((theme: Theme) => ({
 
@@ -44,10 +44,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   // Drawer
   drawer: {
     width: `${drawerWidth}px`,
+    maxWidth: '90vw',
     flexShrink: 0,
   },
   drawer__paper: {
     width: `${drawerWidth}px`,
+    maxWidth: '90vw',
     backgroundColor: theme.palette.secondary.main,
   },
   drawer__content: {
@@ -88,8 +90,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   drawer__content__footer: {
     height: `${drawerFooterHeight}px`,
   },
-  drawer__content__footer__text: {
+  drawer__content__footer__text__name: {
     color: theme.palette.secondary.light,
+  },
+  drawer__content__footer__text__stack: {
+    color: theme.palette.secondary.light,
+    fontSize: '10pt',
   },
 
   // Main Content
@@ -285,10 +291,17 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
               <Divider className={classes.drawer__content__divider} />
             </Grid>
 
-            <Grid item container alignItems='center' justify='center' className={classes.drawer__content__footer}>
-              <Typography className={classes.drawer__content__footer__text}>
-                Cheong Shiu Hong, Ron
-              </Typography>
+            <Grid item container direction='column' alignItems='center' justify='flex-end' className={classes.drawer__content__footer}>
+              <Grid item>
+                <Typography className={classes.drawer__content__footer__text__name}>
+                  Ron Cheong's Portfolio Site
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.drawer__content__footer__text__stack}>
+                  Next.js, Typescript, Material-UI
+                </Typography>
+              </Grid>
             </Grid>
 
           </Grid>

@@ -3,7 +3,7 @@ export const projects = {
     title: 'Full Stack Web Application',
     subtitle: 'Built for Shopee\'s Regional Finance Team - Image Intentionally Blurred',
     description: `
-      Developed from scratch with <strong>docker-compose</strong> to containerize the backend, celery workers & scheduler, and frontend. 
+      Developed from scratch with <strong>docker-compose</strong> to containerize the backend, celery workers, scheduler, redis broker and frontend. 
       Backend built with <strong>Django</strong>, including a management system for the team\'s use and <strong>REST API</strong> for the frontend. 
       Automations done by <strong>Celery</strong> workers for asynchronous execution, including tasks like scraping and processing data from multiple sources and emailing. 
       Frontend built with <strong>Next.js</strong> (<strong>React.js</strong>), styled with <strong>Material-UI</strong> for organisation-wide users. (Image intentionally blurred)
@@ -12,16 +12,17 @@ export const projects = {
     darkModeImage: '/media/images/fswa_blurred_dark.png',
     startDate: 'Dec 2020',
     endDate: 'Jan 2021',
-    codeUrl: 'https://www.shopee.com',
+    codeUrl: '',
     projectUrl: '',
     experience: 'shopee-automation-internship',
     skillsToShow: 4,
     skills: [
       'docker',      
       'python',
+      'typescript',
+      'sql',
       'django',
       'celery',
-      'javascript',
       'react-js',
       'next-js',
       'material-ui',
@@ -32,8 +33,8 @@ export const projects = {
     title: 'UBS International Quant Hackathon 2020',
     subtitle: 'Top 7% (Ranked 23/371)',
     description: `
-      Applied machine learning techniques to Complex Derivatives Pricing with dataset of >16 million rows.
-      Key steps include: dimensionality reduction with PCA, clustering and fitting each cluster with a decision tree regressor.
+      Applied machine learning techniques to Complex Derivatives Pricing with dataset of >16 million rows on a 4GB RAM VM.
+      Key steps include dimensionality reduction with Principal Component Analysis, clustering, storing data with SQLite and fitting each cluster with a decision tree regressor.
     `,
     image: '/media/images/ubs_logo.png',
     startDate: 'Sep 2020',
@@ -45,6 +46,7 @@ export const projects = {
     skills: [
       'python',
       'machine-learning',
+      'sql',
     ],
     files: [],
     teammates: [
@@ -55,9 +57,9 @@ export const projects = {
     title: 'Google Sheets API Graphical User Interface',
     subtitle: 'Built for Shopee\'s Regional Finance Team - Image Intentionally Blurred',
     description: `
-      Built for non-technical users to manipulate and move data by utilizing <strong>Google APIs</strong>, 
+      Built as a Windows executable file for non-technical users to manipulate and move data across hundreds of Google Sheets by utilizing <strong>Google APIs</strong>, 
       with manipulation done in <strong>Python</strong>/<strong>Pandas</strong> triggered by a Graphical User Interface built with 
-      <strong>HTML</strong>/<strong>CSS</strong>/<strong>JS</strong>, communicating via <strong>Eel</strong>.        
+      <strong>HTML</strong>/<strong>CSS</strong>/<strong>JavaScript</strong>, communicating via <strong>Eel</strong>.        
     `,
     image: '/media/images/gsheet_ui_blurred.png',
     startDate: 'Sep 2020',
@@ -65,7 +67,7 @@ export const projects = {
     codeUrl: '',
     projectUrl: '',
     experience: 'shopee-automation-internship',
-    skillsToShow: 4,
+    skillsToShow: 3,
     skills: [
       'python',
       'pandas',
@@ -99,7 +101,9 @@ export const projects = {
   'cfa-research-challenge-2020': {
     title: 'CFA National Research Challenge 2020',
     subtitle: 'National Finalist',
-    description: 'Used book value to estimate WACC ROFL',
+    description: `
+      Valuation and stock pitch of subject company SGX (Ticker: S68). DuPont analysis, DCF Model, bottom-up Beta estimation with Hamada's unlevering of comparables.
+    `,
     image: '/media/images/cfa_presenting.jpg',
     startDate: 'Dec 2019',
     endDate: 'Feb 2020',
@@ -132,7 +136,9 @@ export const projects = {
   'mcgill-international-portfolio-challenge-2019' : {
     title: 'McGill International Portfolio Challenge 2019',
     subtitle: 'International Finalist',
-    description: `Took part in the McGill International Portfolio Competition, being one of the teams invited to Montreal, Canada among 87 teams worldwide from renowned universities like Yale and Sydney.`,
+    description: `
+      Took part in the McGill International Portfolio Competition, being one of the teams invited to Montreal, Canada among 87 teams worldwide from renowned universities like Yale and Sydney.
+    `,
     image: '/media/images/mcgill_team.jpg',
     startDate: 'Sep 2019',
     endDate: 'Nov 2019',
@@ -165,22 +171,29 @@ export const projects = {
   'gerontechnology-research': {
     title: 'Gerontechnology Research',
     subtitle: 'Gerontechnology Research in Social Ageing',
-    description: 'Examining the Perception and Usage of Infocomm Technologies in Socially Engaging the Elderly',
+    description: 'Examining the perception and usage of infocomm technologies in socially engaging the elderly.',
     image: '/media/images/suss_logo.jpg',
+    darkModeImage: '/media/images/suss_logo_dark.jpg',
     startDate: 'Aug 2019',
     endDate: 'Oct 2019',
     codeUrl: '',
     projectUrl: '',
     experience: '',
-    skillsToShow: 0,
-    skills: [],
+    skillsToShow: 1,
+    skills: [
+      'spss',
+    ],
     files: [
       {
         title: 'Report',
         url: '/media/files/Design_X_report.pdf',
         thumbnail: '/media/images/design_x_report_thumbnail.png',
-        
-      }
+      },
+      {
+        title: 'Poster',
+        url: '/media/files/Design_X_poster.pdf',
+        thumbnail: '/media/images/design_x_poster_thumbnail.png',
+      },
     ],
     teammates: [
       'chia-rui-yang',
@@ -193,7 +206,8 @@ export const projects = {
     subtitle: 'Prepared for the Singapore University of Social Sciences',
     description: `
       Prepared for the Singapore University of Social Sciences as a Teaching Assistant. 
-      Content covers the basic requirements in math, gradient descent, linear and logistic regressions, and neural networks.
+      Utilized Jupyter Notebook's interactive widgets to demonstrate gradient descent in regression models.
+      Content covers entry level technical details on the basic requirements in math, gradient descent, linear and logistic regressions, and neural networks.
     `,
     image: '/media/images/ml_workshop.png',
     startDate: 'Jun 2020',
@@ -224,11 +238,11 @@ export const projects = {
     codeUrl: 'https://github.com/cheongshiuhong/shopee-ndsc-advanced-2019',
     projectUrl: 'https://cheongshiuhong.github.io/shopee-ndsc-advanced-2019/',
     experience: '',
-    skillsToShow: 3,
+    skillsToShow: 2,
     skills: [
-      'python', 
+      'pytorch',
       'machine-learning', 
-      'pytorch'
+      'python', 
     ],
     files: [],
   },

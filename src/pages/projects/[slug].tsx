@@ -4,6 +4,7 @@ import Link  from'next/link'
 import Error from 'next/error'
 import CustomHead from '@/components/CustomHead'
 import Badge from '@/components/Badge'
+import ImageLink from '@/components/ImageLink'
 import { ProjectProps } from '@/interfaces/projects'
 import { projects } from '@/data/projects'
 import { experiences } from '@/data/experiences'
@@ -68,7 +69,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   chips: {
     '& > *': {
-      marginRight: theme.spacing(0.5),
+      marginRight: theme.spacing(0.75),
+      marginBottom: theme.spacing(0.75),
     },
   },
   rightAreaTitle: {
@@ -294,13 +296,15 @@ export default function Project({ project }: ProjectPageProps) {
                     </Typography>
                   </Grid>
                   <Grid item>
-                    <motion.div
-                      whileHover={{ scale: [1, 1.08, 1.05], transition: { duration: .3 } }}
-                    >
+                    <ImageLink>
                       <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${project.title} - ${file.title}`}>
-                        <img src={file.thumbnail} className={classes.fileImage} />
+                        <img 
+                          src={file.thumbnail} 
+                          alt={`${file.title}`}
+                          className={classes.fileImage} 
+                        />
                       </a>
-                    </motion.div>
+                    </ImageLink>
                   </Grid>
                 </Grid>
               ))
