@@ -122,4 +122,9 @@ export const skills = {
     category: skillCategories.programming,
     icon: '/media/images/google_api_logo.png',
   },
+  'graphql': {
+    title: 'GraphQL',
+    category: skillCategories.programming,
+    icon: '/media/images/graphql_logo.png',
+  },
 }

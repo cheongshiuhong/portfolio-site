@@ -98,7 +98,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    overflowY: 'auto',
     marginLeft: 0,
     marginTop: `calc(${appBarHeight}px)`,
     paddingTop: '3rem',
@@ -108,14 +107,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     })
   },
   mainShift: {
-    height: '100vh',
     marginLeft: `${drawerWidth}px`,
     marginTop: 0,
-    paddingTop: 0,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     })
+  },
+  mainXl: {
+    // Let alignItems center handle 
+    height: '100vh',
+    marginTop: 0,
+    paddingTop: 0,
   }
 }))
 
@@ -130,6 +133,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
   const classes = useStyles()
   const router = useRouter()
   const drawerPersistent = useMediaQuery<boolean>(theme.breakpoints.up('lg'))
+  const isXLarge = useMediaQuery<boolean>(theme.breakpoints.up('xl'))
 
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false)
 
@@ -292,7 +296,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
             },
           }}
           transition={{duration: 0.8}}
-          className={clsx(classes.main, {[classes.mainShift]: drawerOpen && drawerPersistent})}
+          className={clsx(classes.main, {[classes.mainShift]: drawerOpen && drawerPersistent, [classes.mainXl]: isXLarge})}
         >
           {children}
         </motion.div>

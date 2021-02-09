@@ -1,13 +1,17 @@
 export const experiences = {
   'solar-ai-software-engineering-internship': {
-    title: 'Software Engineering Intern @ Solar AI',
-    subtitle: 'Solar AI',
-    description : '',
+    title: 'Software Engineer Intern @ Solar AI Technologies',
+    subtitle: 'TBD',
+    description : `TBD`,
     image: '/media/images/solar_ai_logo.jpg',
     startDate: 'Feb 2021',
     endDate: 'Aug 2021',
     skillsToShow: 3,
-    skills: [],
+    skills: [
+      'react-js',
+      'next-js',
+      // 'graphql',
+    ],
     files: [],
   },
   'shopee-automation-internship': {
@@ -23,7 +27,13 @@ export const experiences = {
       'javascript',
       'google-api',
     ],
-    files: [],
+    files: [
+      {
+        title: 'Testimonial',
+        url: '/media/files/CFA_Research_Challenge_2020_report.pdf',
+        thumbnail: '/media/images/cfa_report_thumbnail.png',
+      }
+    ],
   },
   'suss-teaching-assistant': {
     title: 'Machine Learning Teaching Assistant @ SUSS',
@@ -32,7 +42,7 @@ export const experiences = {
     image: '/media/images/suss_logo.jpg',
     startDate: 'Jul 2020',
     endDate: 'Present',
-    skillsToShow: 4,
+    skillsToShow: 3,
     skills: [
       'python',
       'machine-learning',

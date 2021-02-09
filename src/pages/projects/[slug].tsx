@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import Link  from'next/link'
@@ -15,20 +14,24 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
-import Box from '@material-ui/core/Box'
-import CardMedia from '@material-ui/core/CardMedia'
+import clsx from 'clsx'
 import { AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    // height: '90%',
     width: '85%',
     maxWidth: '1480px',
   },
+  rootSmall: {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
   image: {
+    width: '100%',
     maxHeight: '320px',
-    width: '540px',
+    maxWidth: '540px',
     borderRadius: '10px',
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
     '&:hover': {
@@ -96,7 +99,7 @@ export default function Project({ project }: ProjectPageProps) {
 
   const theme = useTheme()
   const classes = useStyles()
-  const isSmall = useMediaQuery(theme.breakpoints.down('xl'))
+  const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
   if (typeof project === 'undefined') {
     return <Error statusCode={404} />
@@ -112,18 +115,18 @@ export default function Project({ project }: ProjectPageProps) {
         container
         justify='space-between'
         spacing={8}
-        className={classes.root}
+        className={clsx(classes.root, {[classes.rootSmall]: isSmall})}
       >
         
         {/* Left Area */}
-        <Grid item container direction='column' spacing={3} xs={12} xl={project.files.length || project.teammates ? 9 : 9}>
+        <Grid item container direction='column' spacing={3} xs={12} xl={9}>
         
           {/* Image */}
           <Grid item>  
             <motion.div
               initial={{ y: -200 }}
               animate={{ y: 0 }}
-              transition={{ duration: .5 }}
+              transition={{ duration: .3 }}
             >
               <img
                 src={(theme.palette.type === 'dark' && project.darkModeImage || project.image)}
@@ -141,7 +144,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                   initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                 >
                   <a 
                     href={project.projectUrl}
@@ -164,7 +167,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                   initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                 >
                  <a 
                     href={project.codeUrl}
@@ -192,7 +195,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                   initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                 >
                   <Typography className={classes.title}>
                     {project.title}
@@ -205,7 +208,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                   initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                 >
                   <Typography className={classes.subtitle}>
                     {project.subtitle} ({project.startDate} - {project.endDate})
@@ -220,7 +223,7 @@ export default function Project({ project }: ProjectPageProps) {
                   <motion.div
                     initial={{ y: 200 }}
                     animate={{ y: 0 }}
-                    transition={{ duration: .5 }}
+                    transition={{ duration: .3 }}
                   >
                     <Typography className={classes.association}>
                       Associated with experience:&nbsp;
@@ -241,7 +244,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                  initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                 >
                   <Typography 
                     dangerouslySetInnerHTML={{ __html: project.description}} 
@@ -255,7 +258,7 @@ export default function Project({ project }: ProjectPageProps) {
                 <motion.div
                   initial={{ y: 200 }}
                   animate={{ y: 0 }}
-                  transition={{ duration: .5 }}
+                  transition={{ duration: .3 }}
                   className={classes.chips}
                 >
                   {

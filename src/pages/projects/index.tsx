@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
 import ProjectsCarousel from '@/components/ProjectsCarousel'
+import ProjectCard from '@/components/ProjectCard'
 import { ProjectData, ProjectProps } from '@/interfaces/projects'
 import { projects } from '@/data/projects'
 import { skillCategories, skills } from '@/data/skills'
@@ -13,7 +14,6 @@ import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import MenuItem from '@material-ui/core/MenuItem'
 import clsx from 'clsx'
-// import { useColorModeValue, useMediaQuery, Grid, GridItem, Text, Flex, Select } from '@chakra-ui/react'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -149,7 +149,9 @@ export default function Projects({ projects }: ProjectsPageProps) {
         </Grid>
 
         <Grid item xs={12}>
-          <ProjectsCarousel projects={projectsState} />          
+          <ProjectsCarousel 
+            projects={projectsState} 
+          />          
         </Grid>
       </Grid>
     </>
