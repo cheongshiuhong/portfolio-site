@@ -92,10 +92,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   drawer__content__footer__text__name: {
     color: theme.palette.secondary.light,
+    fontSize: '11pt',
+    fontWeight: 'bold',
   },
   drawer__content__footer__text__stack: {
     color: theme.palette.secondary.light,
-    fontSize: '10pt',
+    fontSize: '9.5pt',
   },
 
   // Main Content
@@ -257,18 +259,22 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
 
             {
               drawerPersistent &&
-              <>
-                <Grid item className={classes.drawer__content__divider__grid}>
-                  <Divider className={classes.drawer__content__divider} />
-                </Grid>
-                
-                <Grid 
-                  item 
-                  container 
-                  alignItems='center' 
-                  justify='space-between' 
-                  className={classes.drawer__content__config}
-                >
+              <Grid item className={classes.drawer__content__divider__grid}>
+                <Divider className={classes.drawer__content__divider} />
+              </Grid>
+            }
+
+            <Grid 
+              item 
+              container 
+              alignItems='center' 
+              justify='space-between' 
+              className={classes.drawer__content__config}
+            >
+              {
+                drawerPersistent &&
+                <>
+                  
                   <Grid item>
                     <Typography className={classes.drawer__content__config__darkModeText}>
                       Dark Mode
@@ -283,9 +289,9 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                       />
                     </NoSsr>
                   </Grid>
-                </Grid>
-              </>
-            }
+                </>
+              }
+            </Grid>
             
             <Grid item className={classes.drawer__content__divider__grid}>
               <Divider className={classes.drawer__content__divider} />
