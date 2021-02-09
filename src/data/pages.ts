@@ -4,5 +4,4 @@ export const pages = [
   {text: 'Projects', href: '/projects'},
   {text: 'Experiences', href: '/experiences'},
   {text: 'Education', href: '/education'},
-  {text: 'Skills', href: '/skills'},
 ]

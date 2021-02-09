@@ -98,6 +98,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
+    minHeight: '95vh',
     marginLeft: 0,
     marginTop: `calc(${appBarHeight}px)`,
     paddingTop: '3rem',
@@ -116,9 +117,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   mainXl: {
     // Let alignItems center handle 
-    height: '100vh',
-    marginTop: 0,
-    paddingTop: 0,
+    // height: '100vh',
+    // maxHeight: '100vh',
+    // marginTop: 0,
+    // paddingTop: 0,
   }
 }))
 
@@ -234,6 +236,17 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                   </Grid>
                 ))
               }
+              <Grid item>
+                <a href='https://blog.roncheong.me' target='_blank' rel='noreferrer'>
+                  <Typography 
+                    align='left'
+                    className={classes.drawer__content_navigation__text}   
+                  >
+                    &gt;&nbsp;Blog
+                  </Typography>
+                </a>
+              </Grid>
+
             </Grid>
 
             {

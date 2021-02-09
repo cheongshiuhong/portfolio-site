@@ -167,9 +167,7 @@ export default function Home() {
             className={classes.resumeButton}
           >
             <a download='' href='/media/files/ShiuHong_Cheong_Resume.pdf'>
-              {/* <Typography> */}
                 Download Resume
-              {/* </Typography> */}
             </a>
           </Button>
         </Grid>
@@ -180,7 +178,7 @@ export default function Home() {
           <Grid item container justify='center' spacing={2} className={classes.navigators}>
             {
               pages.filter(page => page.href !== '/').map(page => (
-                <Grid item container justify='center' xs={6} sm={4} lg={2}>
+                <Grid key={page.text} item container justify='center' xs={6} sm={4} lg={2}>
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}

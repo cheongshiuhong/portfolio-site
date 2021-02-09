@@ -14,6 +14,8 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
+import clsx from 'clsx'
+import Box from '@material-ui/core/Box'
 import { motion } from 'framer-motion'
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -21,9 +23,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '85%',
     maxWidth: '1480px',
   },
+  rootSmall: {
+    width: '100%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  leftArea: {
+    // minHeight: '50vh',
+  },
   image: {
+    width: '100%',
     maxHeight: '320px',
-    width: '540px',
+    maxWidth: '540px',
     borderRadius: '10px',
     boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
     '&:hover': {
@@ -63,6 +74,13 @@ const useStyles = makeStyles((theme: Theme) => ({
       marginRight: theme.spacing(0.5),
     },
   },
+  rightArea: {
+    // maxHeight: '80vh',
+    // overflowY: 'auto',
+    // display: 'grid',
+    // // alignItems: 'center',
+    // justifyContent: 'center',
+  },
   rightAreaTitle: {
     fontSize: '14pt',
     fontWeight: 'bold',
@@ -91,7 +109,7 @@ export default function Experience({ experience }: ExperiencePageProps) {
 
   const theme = useTheme()
   const classes = useStyles()
-  const isSmall = useMediaQuery(theme.breakpoints.down('xl'))
+  const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
   if (typeof experience === 'undefined') {
     return <Error statusCode={404} />
@@ -107,11 +125,11 @@ export default function Experience({ experience }: ExperiencePageProps) {
         container
         justify='space-between'
         spacing={8}
-        className={classes.root}
+        className={clsx(classes.root, {[classes.rootSmall]: isSmall})}
       >
         
         {/* Left Area */}
-        <Grid item container direction='column' spacing={3} xs={12} xl={9}>
+        <Grid item container direction='column' spacing={3} xs={12} xl={9} className={classes.leftArea}>
         
           {/* Image */}
           <Grid item>  
