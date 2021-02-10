@@ -159,59 +159,65 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
         {/* NavBar */}
         {
           (drawerPersistent === false) &&
-          <AppBar
-            position='fixed'
+          <motion.div
+            initial={{ y: -200 }}
+            animate={{ y: 0 }}
+            transition={{ duration: .3 }}
           >
-            <Toolbar className={classes.toolbar}>
-              <Grid 
-                container
-                alignItems='center'
-                justify='space-between'
-              >
+            <AppBar
+              position='fixed'
+            >
+              <Toolbar className={classes.toolbar}>
                 <Grid 
-                  item 
-                  container 
-                  alignItems='center' 
-                  justify='flex-start'
-                  spacing={2}
-                  xs={9}
-                  className={classes.appbar__darkMode}
-                >
-                  <FormGroup>
-                    <FormControlLabel
-                      labelPlacement='start'
-                      label={
-                        <Typography className={classes.appbar__darkModeText}>
-                          Dark Mode
-                        </Typography>
-                      }
-                      control={
-                        <NoSsr>
-                          <Switch 
-                            checked={theme.palette.type === 'dark'}
-                            color='default'
-                            onChange={() => setDarkMode(theme.palette.type === 'light')}
-                          />
-                        </NoSsr>    
-                      }
-                    />
-                  </FormGroup>
-                </Grid>
+                  container
+                  alignItems='center'
+                  justify='space-between'
+                  >
+                  <Grid 
+                    item 
+                    container 
+                    alignItems='center' 
+                    justify='flex-start'
+                    spacing={2}
+                    xs={9}
+                    className={classes.appbar__darkMode}
+                  >
+                    <FormGroup>
+                      <FormControlLabel
+                        labelPlacement='start'
+                        label={
+                          <Typography className={classes.appbar__darkModeText}>
+                            Dark Mode
+                          </Typography>
+                        }
+                        control={
+                          <NoSsr>
+                            <Switch 
+                              checked={theme.palette.type === 'dark'}
+                              color='default'
+                              onChange={() => setDarkMode(theme.palette.type === 'light')}
+                              />
+                          </NoSsr>    
+                        }
+                        />
+                    </FormGroup>
+                  </Grid>
 
-                <Grid 
-                  item 
-                  container 
-                  justify='flex-end' 
-                  xs={3}
-                >
-                  <span onClick={() => setDrawerOpen(true)}>
-                    <HamburgerMenu />
-                  </span>
-                </Grid>
+                  <Grid 
+                    item 
+                    container 
+                    justify='flex-end' 
+                    xs={3}
+                    >
+                    <span onClick={() => setDrawerOpen(true)}>
+                      <HamburgerMenu />
+                    </span>
+                  </Grid>
 
-              </Grid>
-            </Toolbar>
-          </AppBar>
+                </Grid>
+              </Toolbar>
+            </AppBar>
+          </motion.div>
         }
 
         {/* Drawer */}
