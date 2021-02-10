@@ -80,7 +80,7 @@ export const educations = {
       International Finance - B+ <br>
       Chinese Kungfu - B+ <br>
     `,
-    image: '/media/images/fudan_university_logo.jpg',
+    image: '/media/images/fudan_university_logo.png',
     startDate: 'Jul 2019',
     endDate: 'Aug 2019',
     url: 'https://www.coursera.org/account/accomplishments/verify/5Q4Q5YYBKGF7',
