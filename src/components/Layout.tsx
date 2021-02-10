@@ -12,6 +12,8 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import NoSsr from '@material-ui/core/NoSsr'
+import FormGroup from '@material-ui/core/FormGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Switch from '@material-ui/core/Switch'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
@@ -175,20 +177,25 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                   xs={9}
                   className={classes.appbar__darkMode}
                 >
-                  <Grid item>
-                    <Typography className={classes.appbar__darkModeText}>
-                      Dark Mode
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <NoSsr>
-                      <Switch 
-                        checked={theme.palette.type === 'dark'}
-                        color='default'
-                        onChange={() => setDarkMode(theme.palette.type === 'light')}
-                      />
-                    </NoSsr>
-                  </Grid>
+                  <FormGroup>
+                    <FormControlLabel
+                      labelPlacement='start'
+                      label={
+                        <Typography className={classes.appbar__darkModeText}>
+                          Dark Mode
+                        </Typography>
+                      }
+                      control={
+                        <NoSsr>
+                          <Switch 
+                            checked={theme.palette.type === 'dark'}
+                            color='default'
+                            onChange={() => setDarkMode(theme.palette.type === 'light')}
+                          />
+                        </NoSsr>    
+                      }
+                    />
+                  </FormGroup>
                 </Grid>
 
                 <Grid 
