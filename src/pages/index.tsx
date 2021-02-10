@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '65px',
     width: '65px',
     borderRadius: 0,
+    color: 'white',
   },
   navigator__text: {
     fontSize: '10.5pt',
@@ -182,7 +183,11 @@ export default function Home() {
               pages.filter(page => page.href !== '/').map(page => (
                 <Grid key={page.text} item container justify='center' xs={6} sm={3} lg={2}>
                   <ImageLink exitOnMount>
-                    <Avatar src={page.icon} className={classes.navigator__avatar} onClick={() => router.push(page.href)}/>
+                    <Avatar 
+                      src={theme.palette.type === 'dark' && page.darkModeIcon || page.icon} 
+                      className={classes.navigator__avatar} 
+                      onClick={() => router.push(page.href)}
+                    />
                     <Typography align='center' className={classes.navigator__text}>
                       {page.text}
                     </Typography>
