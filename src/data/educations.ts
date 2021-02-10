@@ -4,41 +4,41 @@ export const educations = {
     subtitle: 'First-Class Honours — CGPA: 4.65 / 5.00',
     description: `
       📚 <strong>Academic Achievements</strong> <br>
-      Dean's Academic Achievers List for Academic Excellence AY2018/2019 <br>
-      Valedictorian Recipient of Chettiar's Temple Society Scholarship Awards 2020 <br>
-      SUSS Full Time Scholarship 2020<br>
+      &bull; Dean's Academic Achievers List for Academic Excellence AY2018/2019 <br>
+      &bull; Valedictorian Recipient of Chettiar's Temple Society Scholarship Awards 2020 <br>
+      &bull; SUSS Full Time Scholarship 2020<br>
       <br>
       🔑 <strong>Key Appointments</strong> <br>
-      Investment Interest Group Executive Committee <br>
-      Ambassador for Marketing Campaigns <br>
+      &bull;Investment Interest Group Executive Committee <br>
+      &bull;Ambassador for Marketing Campaigns <br>
       <br>
       ⭐️⭐️⭐️ <strong>Highest Distinctions (A+)</strong>: <br>
-      <strong>ACC201</strong> &mdash; Financial Accounting <br> 
-      <strong>ANL251</strong> &mdash; Python Programming <br>
-      <strong>BUS105</strong> &mdash; Statistics <br> 
-      <strong>FIN205</strong> &mdash; Data Technologies in Financial Modeling <br> 
-      <strong>FIN303</strong> &mdash; Financial Management <br>
-      <strong>FIN311</strong> &mdash; Mathematics and Programming for Finance <br> 
-      <strong>FIN353</strong> &mdash; Portfolio Management <br> 
-      <strong>MTH107</strong> &mdash; Calculus I <br> 
-      <strong>MTH207</strong> &mdash; Linear Algebra <br> 
-      <strong>MTH208</strong> &mdash;Advanced Linear Algebra <br> 
-      <strong>MTH305</strong> &mdash; Principles of Applied Probability <br> 
-      <strong>MTH306</strong> &mdash; Further Applied Probability <br> 
+      &bull; <strong>ACC201</strong> &mdash; Financial Accounting <br> 
+      &bull; <strong>ANL251</strong> &mdash; Python Programming <br>
+      &bull; <strong>BUS105</strong> &mdash; Statistics <br> 
+      &bull; <strong>FIN205</strong> &mdash; Data Technologies in Financial Modeling <br> 
+      &bull; <strong>FIN303</strong> &mdash; Financial Management <br>
+      &bull; <strong>FIN311</strong> &mdash; Mathematics and Programming for Finance <br> 
+      &bull; <strong>FIN353</strong> &mdash; Portfolio Management <br> 
+      &bull; <strong>MTH107</strong> &mdash; Calculus I <br> 
+      &bull; <strong>MTH207</strong> &mdash; Linear Algebra <br> 
+      &bull; <strong>MTH208</strong> &mdash;Advanced Linear Algebra <br> 
+      &bull; <strong>MTH305</strong> &mdash; Principles of Applied Probability <br> 
+      &bull; <strong>MTH306</strong> &mdash; Further Applied Probability <br> 
       <br>
       ⭐️⭐️ <strong>High Distinctions (A)</strong>: <br>
-      <strong>BUS100</strong> &mdash; Business Skills and Management <br>
-      <strong>ECO201</strong> &mdash; Managerial Economics <br>
-      <strong>FIN301</strong> &mdash; Financial Instruments, Institutions and Markets <br>
-      <strong>FIN383</strong> &mdash; Financial Technologies and Innovations <br>
-      <strong>FIN359</strong> &mdash; Derivative Securities <br>
+      &bull; <strong>BUS100</strong> &mdash; Business Skills and Management <br>
+      &bull; <strong>ECO201</strong> &mdash; Managerial Economics <br>
+      &bull; <strong>FIN301</strong> &mdash; Financial Instruments, Institutions and Markets <br>
+      &bull; <strong>FIN383</strong> &mdash; Financial Technologies and Innovations <br>
+      &bull; <strong>FIN359</strong> &mdash; Derivative Securities <br>
       <br>
       ⭐️ <strong>Distinctions (A-)</strong>: <br>
-      <strong>HRM203</strong> &mdash; Human Behaviour in Organisations <br>
-      <strong>LOG202</strong> &mdash; Managing Operations <br>
-      <strong>MKT202</strong> &mdash; Marketing Managment <br>
-      <strong>SCO399</strong> &mdash; Design-X <br>
-      <strong>SCO101</strong> &mdash; Why Do Good? <br>
+      &bull; <strong>HRM203</strong> &mdash; Human Behaviour in Organisations <br>
+      &bull; <strong>LOG202</strong> &mdash; Managing Operations <br>
+      &bull; <strong>MKT202</strong> &mdash; Marketing Managment <br>
+      &bull; <strong>SCO399</strong> &mdash; Design-X <br>
+      &bull; <strong>SCO101</strong> &mdash; Why Do Good? <br>
     `,
     image: '/media/images/suss_logo.jpg',
     darkModeImage: '/media/images/suss_logo_dark.jpg',
