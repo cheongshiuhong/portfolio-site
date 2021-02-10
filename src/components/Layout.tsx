@@ -156,7 +156,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
       <header>
         {/* NavBar */}
         {
-          !drawerPersistent &&
+          (drawerPersistent === false) &&
           <AppBar
             position='fixed'
           >
