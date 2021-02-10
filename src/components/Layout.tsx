@@ -161,7 +161,8 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
           (drawerPersistent === false) &&
           <motion.div
             initial={{ y: -200 }}
-            animate={{ y: 0 }}
+            animate={{ y: -50 }}
+            exit={{ y: -200 }}
             transition={{ duration: .3 }}
           >
             <AppBar
