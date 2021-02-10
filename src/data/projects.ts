@@ -211,7 +211,7 @@ export const projects = {
     type: projectTypes.academic,
     codeUrl: '',
     projectUrl: '',
-    education: 'suss-bachelors-finance',
+    education: 'suss-bsc-finance',
     skillsToShow: 1,
     skills: [
       'spss',
@@ -249,7 +249,7 @@ export const projects = {
     codeUrl: 'https://github.com/cheongshiuhong/machinelearningworkshop',
     projectUrl: 'https://cheongshiuhong.github.io/machinelearningworkshop/',
     experience: 'suss-teaching-assistant',
-    education: 'suss-bachelors-finance',
+    education: 'suss-bsc-finance',
     skillsToShow: 3,
     skills: [
       'python',

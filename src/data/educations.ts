@@ -1,12 +1,49 @@
 export const educations = {
-  'suss-bachelors-finance': {
+  'suss-bsc-finance': {
     title: 'Bachelor of Science, Major in Finance, Minor in Math @ SUSS',
-    subtitle: 'First-Class Honours — GPA: 4.65 / 5.00',
-    description: ``,
+    subtitle: 'First-Class Honours — CGPA: 4.65 / 5.00',
+    description: `
+      📚 𝗔𝗰𝗮𝗱𝗲𝗺𝗶𝗰 𝗔𝗰𝗵𝗶𝗲𝘃𝗲𝗺𝗲𝗻𝘁𝘀 <br>
+      Dean's Academic Achievers List for Academic Excellence AY2018/2019 <br>
+      Valedictorian Recipient of Chettiar's Temple Society Scholarship Awards 2020 <br>
+      SUSS Full Time Scholarship 2020<br>
+      <br>
+      🔑 𝗞𝗲𝘆 𝗔𝗽𝗽𝗼𝗶𝗻𝘁𝗺𝗲𝗻𝘁𝘀 <br>
+      Investment Interest Group Executive Committee <br>
+      Ambassador for Marketing Campaigns <br>
+      <br>
+      ⭐️⭐️⭐️ <strong>Highest Distinctions (A+)</strong>: <br>
+      <strong>ACC201</strong> &mdash; Financial Accounting <br> 
+      <strong>ANL251</strong> &mdash; Python Programming <br>
+      <strong>BUS105</strong> &mdash; Statistics <br> 
+      <strong>FIN205</strong> &mdash; Data Technologies in Financial Modeling <br> 
+      <strong>FIN303</strong> &mdash; Financial Management <br>
+      <strong>FIN311</strong> &mdash; Mathematics and Programming for Finance <br> 
+      <strong>FIN353</strong> &mdash; Portfolio Management <br> 
+      <strong>MTH107</strong> &mdash; Calculus I <br> 
+      <strong>MTH207</strong> &mdash; Linear Algebra <br> 
+      <strong>MTH208</strong> &mdash;Advanced Linear Algebra <br> 
+      <strong>MTH305</strong> &mdash; Principles of Applied Probability <br> 
+      <strong>MTH306</strong> &mdash; Further Applied Probability <br> 
+      <br>
+      ⭐️⭐️ <strong>High Distinctions (A)</strong>: <br>
+      <strong>BUS100</strong> &mdash; Business Skills and Management <br>
+      <strong>ECO201</strong> &mdash; Managerial Economics <br>
+      <strong>FIN301</strong> &mdash; Financial Instruments, Institutions and Markets <br>
+      <strong>FIN383</strong> &mdash; Financial Technologies and Innovations <br>
+      <strong>FIN359</strong> &mdash; Derivative Securities <br>
+      <br>
+      ⭐️ <strong>Distinctions (A-)</strong>: <br>
+      <strong>HRM203</strong> &mdash; Human Behaviour in Organisations <br>
+      <strong>LOG202</strong> &mdash; Managing Operations <br>
+      <strong>MKT202</strong> &mdash; Marketing Managment <br>
+      <strong>SCO399</strong> &mdash; Design-X <br>
+      <strong>SCO101</strong> &mdash; Why Do Good? <br>
+    `,
     image: '/media/images/suss_logo.jpg',
     darkModeImage: '/media/images/suss_logo_dark.jpg',
     startDate: 'Jul 2018',
-    endDate: 'May 2022 (expected)',
+    endDate: 'May 2022',
     url: '',
     files: [],
   },
@@ -18,7 +55,13 @@ export const educations = {
     startDate: 'Jun 2020',
     endDate: 'Jun 2020',
     url: 'https://www.coursera.org/account/accomplishments/verify/5Q4Q5YYBKGF7',
-    files: [],
+    files: [
+      {
+        title: 'Course Certificate',
+        url: '/media/files/Coursera_Financial_Engineering_&_Risk_Management_Certificate.pdf',
+        thumbnail: '/media/images/coursera_financial_engineering_&_risk_management_certificate.png',
+      }
+    ],
   },
   'fudan-university-international-summer-programme': {
     title: 'International Summer Programme @ Fudan University',
@@ -33,7 +76,6 @@ export const educations = {
       Chinese Kungfu - B+
     `,
     image: '/media/images/fudan_university_logo.jpg',
-    // darkModeImage: '/media/images/fudan_university_logo_dark.png',
     startDate: 'Jul 2019',
     endDate: 'Aug 2019',
     url: 'https://www.coursera.org/account/accomplishments/verify/5Q4Q5YYBKGF7',
@@ -104,7 +146,7 @@ export const educations = {
         thumbnail: '/media/images/coursera_deep_learning_structuring_machine_learning_projects_certificate.png',
       },
       {
-        title: 'Convolutional Nerual Networks',
+        title: 'Convolutional Neural Networks',
         url: '/media/files/Coursera_Deep_Learning_Convolutional_Neural_Networks.pdf',
         thumbnail: '/media/images/coursersa_deep_learning_convolutional_neural_networks.png',
       },

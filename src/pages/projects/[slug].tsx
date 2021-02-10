@@ -221,7 +221,7 @@ export default function Project({ project }: ProjectPageProps) {
                 
               {/* Association */}
               {
-                Boolean(project.experience.slug) && 
+                (Boolean(project.experience.slug) || Boolean(project.education.slug)) && 
                 <Grid item>
                   <motion.div
                     initial={{ y: 200 }}
@@ -229,14 +229,38 @@ export default function Project({ project }: ProjectPageProps) {
                     transition={{ duration: .3 }}
                   >
                     <Typography className={classes.association}>
-                      Associated with experience:&nbsp;
-                      <Link href={`/experiences/${project.experience.slug}`}>
-                        <a aria-label={project.experience.title}>
-                          <u>
-                            {project.experience.title}
-                          </u>
-                        </a>
-                      </Link>
+                      Associated with&nbsp;
+                      {
+                        Boolean(project.experience.slug) &&
+                        <>
+                          experience:&nbsp;
+                          <Link href={`/experiences/${project.experience.slug}`}>
+                            <a aria-label={project.experience.title}>
+                              <u>
+                                {project.experience.title}
+                              </u>
+                            </a>
+                          </Link>
+                        </>
+                      }
+                      {
+                        (Boolean(project.experience.slug) && Boolean(project.education.slug)) &&
+                        <><br />and&nbsp;</>
+                      }
+                      {
+                        Boolean(project.education.slug) &&
+                        <>
+                          education:&nbsp;
+                          <Link href={`/education/${project.education.slug}`}>
+                            <a aria-label={project.education.title}>
+                              <u>
+                                {project.education.title}
+                              </u>
+                            </a>
+                          </Link>
+                        </>
+                      }
+
                     </Typography>
                   </motion.div>
                 </Grid>

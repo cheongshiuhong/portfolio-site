@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '12pt',
     marginTop: '12px',
     marginBottom: '12px',
-    lineHeight: '28px',
+    lineHeight: '22px',
   },
   chips: {
     '& > *': {
@@ -199,6 +199,7 @@ export default function Education({ education }: EducationPageProps) {
                 <Grid key={file.title} item container direction='column' alignItems='center' spacing={1}>
                   <Grid item>
                     <Typography
+                      align='center'
                       className={classes.rightAreaTitle}
                     >
                       {file.title}
@@ -217,13 +218,16 @@ export default function Education({ education }: EducationPageProps) {
           
             {/* Key Projects */}
             <Grid item container direction='column' alignItems='center' spacing={1}>
-              <Grid item>
-                <Typography
-                  className={classes.rightAreaTitle}
-                >
-                  {education.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
-                </Typography>
-              </Grid>
+              {
+                Boolean(education.projects.length) &&
+                <Grid item>
+                  <Typography
+                    className={classes.rightAreaTitle}
+                    >
+                    {education.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
+                  </Typography>
+                </Grid>
+              }
               {
                 education.projects.map(project => (
                   <Grid key={project.title} item container direction='column' alignItems='center' spacing={1} className={classes.project}>

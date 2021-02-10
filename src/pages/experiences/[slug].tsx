@@ -243,13 +243,17 @@ export default function Experience({ experience }: ExperiencePageProps) {
           
             {/* Key Projects */}
             <Grid item container direction='column' alignItems='center' spacing={1}>
-              <Grid item>
-                <Typography
-                  className={classes.rightAreaTitle}
-                >
-                  {experience.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
-                </Typography>
-              </Grid>
+              {
+                Boolean(experience.projects.length) &&
+                <Grid item>
+                  <Typography
+                    align='center'
+                    className={classes.rightAreaTitle}
+                    >
+                    {experience.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
+                  </Typography>
+                </Grid>
+              }
               {
                 experience.projects.map(project => (
                   <Grid key={project.title} item container direction='column' alignItems='center' spacing={1} className={classes.project}>
