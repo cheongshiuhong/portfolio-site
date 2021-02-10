@@ -1,3 +1,22 @@
+export const projectTypes = {
+  // 'personal': {
+  //   slug: 'personal',
+  //   title: 'Personal Projects',
+  // },
+  'academic': {
+    slug: 'academic',
+    title: 'Academic Projects',
+  },
+  'work': {
+    slug: 'work',
+    title: 'Work Projects',
+  },
+  'competition': {
+    slug: 'competition',
+    title: 'Competitions',
+  },
+}
+
 export const projects = {
   'full-stack-web-application-for-shopee': {
     title: 'Full Stack Web Application',
@@ -12,6 +31,7 @@ export const projects = {
     darkModeImage: '/media/images/fswa_blurred_dark.png',
     startDate: 'Dec 2020',
     endDate: 'Jan 2021',
+    type: projectTypes.work,
     codeUrl: '',
     projectUrl: '',
     experience: 'shopee-automation-internship',
@@ -39,9 +59,9 @@ export const projects = {
     image: '/media/images/ubs_logo.png',
     startDate: 'Sep 2020',
     endDate: 'Oct 2020',
+    type: projectTypes.competition,
     codeUrl: '',
     projectUrl: '',
-    experience: '',
     skillsToShow: 2,
     skills: [
       'python',
@@ -64,6 +84,7 @@ export const projects = {
     image: '/media/images/gsheet_ui_blurred.png',
     startDate: 'Sep 2020',
     endDate: 'Sep 2020',
+    type: projectTypes.work,
     codeUrl: '',
     projectUrl: '',
     experience: 'shopee-automation-internship',
@@ -85,9 +106,9 @@ export const projects = {
     image: '/media/images/mpt_sig.png',
     startDate : 'Mar 2020',
     endDate: 'Mar 2020',
+    type: projectTypes.academic,
     codeUrl: 'https://github.com/cheongshiuhong/mpt-demo-sig',
     projectUrl: 'https://cheongshiuhong.github.io/mpt-demo-sig/',
-    experience: '',
     skillsToShow: 2,
     skills: [
       'modern-portfolio-theory',
@@ -107,9 +128,9 @@ export const projects = {
     image: '/media/images/cfa_presenting.jpg',
     startDate: 'Dec 2019',
     endDate: 'Feb 2020',
+    type: projectTypes.competition,
     codeUrl: '',
     projectUrl: '',
-    experience: '',
     skillsToShow: 3,
     skills: [
       'equity-valuation',
@@ -142,9 +163,9 @@ export const projects = {
     image: '/media/images/mcgill_team.jpg',
     startDate: 'Sep 2019',
     endDate: 'Nov 2019',
+    type: projectTypes.competition,
     codeUrl: '',
     projectUrl: '',
-    experience: '',
     skillsToShow: 3,
     skills: [
       'modern-portfolio-theory',
@@ -171,14 +192,26 @@ export const projects = {
   'gerontechnology-research': {
     title: 'Gerontechnology Research',
     subtitle: 'Gerontechnology Research in Social Ageing',
-    description: 'Examining the perception and usage of infocomm technologies in socially engaging the elderly.',
+    description: `
+      Singapore launched the Smart Nation initiative in 2014 as a national effort to create a state where
+      lives are enhanced by technology. 
+      By surveying 30 elderly users, this study draws on the
+      Almere model to examine the elderlies’ perceptions and usages of mobile phone applications to
+      discuss the extent to which social psychological and socio-demographic factors influence
+      their usage behaviour. 
+      Through Ordinary Least Square (OLS) regressions and mediation
+      analyses, it shows that usage is associated with perceived usefulness and anxiety. It also finds
+      significant group differences between different age groups of elderly users and the number of
+      generations living in household.
+    `,
     image: '/media/images/suss_logo.jpg',
     darkModeImage: '/media/images/suss_logo_dark.jpg',
     startDate: 'Aug 2019',
     endDate: 'Oct 2019',
+    type: projectTypes.academic,
     codeUrl: '',
     projectUrl: '',
-    experience: '',
+    education: 'suss-bachelors-finance',
     skillsToShow: 1,
     skills: [
       'spss',
@@ -212,9 +245,11 @@ export const projects = {
     image: '/media/images/ml_workshop.png',
     startDate: 'Jun 2020',
     endDate: 'Jul 2020',
+    type: projectTypes.academic,
     codeUrl: 'https://github.com/cheongshiuhong/machinelearningworkshop',
     projectUrl: 'https://cheongshiuhong.github.io/machinelearningworkshop/',
     experience: 'suss-teaching-assistant',
+    education: 'suss-bachelors-finance',
     skillsToShow: 3,
     skills: [
       'python',
@@ -234,10 +269,10 @@ export const projects = {
     `,
     image: '/media/images/ndsc.png',
     startDate: 'Feb 2019',
-    endDate: 'Mar 2019', 
+    endDate: 'Mar 2019',
+    type: projectTypes.competition,
     codeUrl: 'https://github.com/cheongshiuhong/shopee-ndsc-advanced-2019',
     projectUrl: 'https://cheongshiuhong.github.io/shopee-ndsc-advanced-2019/',
-    experience: '',
     skillsToShow: 2,
     skills: [
       'pytorch',

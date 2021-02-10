@@ -36,8 +36,8 @@ export const experiences = {
     files: [
       {
         title: 'Testimonial',
-        url: '/media/files/CFA_Research_Challenge_2020_report.pdf',
-        thumbnail: '/media/images/cfa_report_thumbnail.png',
+        url: '/media/files/Shopee_Automation_Internship_Testimonial.pdf',
+        thumbnail: '/media/images/shopee_automation_intern_testimonial_thumbnail.png',
       },
     ],
   },

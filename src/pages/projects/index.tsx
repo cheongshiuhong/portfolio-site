@@ -3,9 +3,8 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
 import ProjectsCarousel from '@/components/ProjectsCarousel'
-import ProjectCard from '@/components/ProjectCard'
 import { ProjectData, ProjectProps } from '@/interfaces/projects'
-import { projects } from '@/data/projects'
+import { projectTypes, projects } from '@/data/projects'
 import { skillCategories, skills } from '@/data/skills'
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
 import  useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -40,6 +39,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       cursor: 'pointer',
     },
   },
+  carousel: {
+    minHeight: '500px',
+  },
 }))
 
 export interface ProjectsPageProps {
@@ -60,13 +62,23 @@ export default function Projects({ projects }: ProjectsPageProps) {
   const [typeFilter, setTypeFilter] = useState<string>(router.query.type instanceof Array ? router.query.type[0] : router.query.type || 'all')
 
   useEffect(() => {
-    const query = router.query.tag instanceof Array ? router.query.tag[0] : router.query.tag || 'all'
-    setTagFilter(query)
-    if (query !== 'all' && query !== '') {
-      setProjectsState(projects.filter(project => project.skills.map(skill => skill.category.slug).includes(query)))
-    } else {
-      setProjectsState(projects)
+    const tagQuery = router.query.tag instanceof Array ? router.query.tag[0] : router.query.tag || 'all'
+    const typeQuery = router.query.type instanceof Array ? router.query.type[0] : router.query.type || 'all'
+    
+    setTagFilter(tagQuery)
+    setTypeFilter(typeQuery)
+
+    let tempProjects = projects
+    if (tagQuery !== 'all' && tagQuery !== '') {
+      tempProjects = tempProjects.filter(project => project.skills.map(skill => skill.category.slug).includes(tagQuery))
+    } 
+    
+    if (typeQuery !== 'all' && typeQuery !== '') {
+      tempProjects = tempProjects.filter(project => project.type.slug.includes(typeQuery))
     }
+    
+    setProjectsState(tempProjects)
+    
   }, [router])
 
   return (
@@ -133,7 +145,7 @@ export default function Projects({ projects }: ProjectsPageProps) {
               >
                 <MenuItem value='all' dense>All</MenuItem>
                 {
-                  Object.entries(skillCategories).map(each => (
+                  Object.entries(projectTypes).map(each => (
                     <MenuItem 
                       key={each[0]} 
                       value={each[0]} 
@@ -148,7 +160,7 @@ export default function Projects({ projects }: ProjectsPageProps) {
           </Grid>
         </Grid>
 
-        <Grid item xs={12}>
+        <Grid item container alignItems='center' xs={12} className={classes.carousel}>
           <ProjectsCarousel 
             projects={projectsState} 
           />          

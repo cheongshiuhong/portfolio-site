@@ -2,13 +2,11 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import Link  from'next/link'
 import Error from 'next/error'
 import CustomHead from '@/components/CustomHead'
-import Badge from '@/components/Badge'
 import ImageLink from '@/components/ImageLink'
-import { ProjectData } from '@/interfaces/projects' 
-import { ExperienceProps } from '@/interfaces/experiences'
+import { ProjectData } from '@/interfaces/projects'
+import { EducationProps } from '@/interfaces/educations'
 import { projects } from '@/data/projects'
-import { experiences } from '@/data/experiences'
-import { skills } from '@/data/skills'
+import { educations } from '@/data/educations'
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Grid from '@material-ui/core/Grid'
@@ -27,7 +25,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: 'auto',
   },
   leftArea: {
-    // minHeight: '50vh',
+    
   },
   image: {
     width: '100%',
@@ -75,11 +73,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   rightArea: {
-    // maxHeight: '80vh',
-    // overflowY: 'auto',
-    // display: 'grid',
-    // // alignItems: 'center',
-    // justifyContent: 'center',
+
   },
   rightAreaTitle: {
     fontSize: '14pt',
@@ -101,26 +95,26 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-interface ExperiencePageProps {
-  experience: ExperienceProps;
+interface EducationPageProps {
+  education: EducationProps;
 }
 
-export default function Experience({ experience }: ExperiencePageProps) {
+export default function Education({ education }: EducationPageProps) {
 
   const theme = useTheme()
   const classes = useStyles()
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
 
-  if (typeof experience === 'undefined') {
+  if (typeof education === 'undefined') {
     return <Error statusCode={404} />
   }
 
   return (
     <>
       <CustomHead
-        metaTitle={experience.title}
-        metaDescription={`${experience.title} ${experience.subtitle}`}
-        metaImage={experience.image}
+        metaTitle={education.title}
+        metaDescription={`${education.title} ${education.subtitle}`}
+        metaImage={education.image}
       />
       <Grid 
         container
@@ -140,8 +134,8 @@ export default function Experience({ experience }: ExperiencePageProps) {
               transition={{ duration: .3 }}
             >
               <img
-                src={(theme.palette.type === 'dark' && experience.darkModeImage || experience.image)}
-                alt={experience.title}
+                src={(theme.palette.type === 'dark' && education.darkModeImage || education.image)}
+                alt={education.title}
                 className={classes.image}
               />
             </motion.div>
@@ -158,7 +152,7 @@ export default function Experience({ experience }: ExperiencePageProps) {
                   transition={{ duration: .3 }}
                 >
                   <Typography className={classes.title}>
-                    {experience.title}
+                    {education.title}
                   </Typography>
                 </motion.div>
               </Grid>
@@ -171,7 +165,7 @@ export default function Experience({ experience }: ExperiencePageProps) {
                   transition={{ duration: .3 }}
                 >
                   <Typography className={classes.subtitle}>
-                    {experience.subtitle} ({experience.startDate} - {experience.endDate})
+                    {education.subtitle} ({education.startDate} - {education.endDate})
                   </Typography>
                 </motion.div> 
               </Grid>
@@ -184,29 +178,9 @@ export default function Experience({ experience }: ExperiencePageProps) {
                   transition={{ duration: .3 }}
                 >
                   <Typography 
-                    dangerouslySetInnerHTML={{ __html: experience.description}} 
+                    dangerouslySetInnerHTML={{ __html: education.description}} 
                     className={classes.description} 
                   />
-                </motion.div>
-              </Grid>
-
-              {/* Skill Badges */}
-              <Grid item>
-                <motion.div
-                  initial={{ y: 200 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: .3 }}
-                  className={classes.chips}
-                >
-                  {
-                    experience.skills.map(skill => (
-                      <Badge
-                        key={skill.title}
-                        label={skill.title}
-                        color={skill.category.color}
-                      />
-                    ))
-                  }
                 </motion.div>
               </Grid>
 
@@ -216,12 +190,12 @@ export default function Experience({ experience }: ExperiencePageProps) {
 
         {/* Right Area */}
         {
-          Boolean(experience.files.length || experience.projects.length) &&
+          Boolean(education.files.length || education.projects.length) &&
           <Grid item container direction='column' spacing={3} xs={12} xl={3}>
 
             {/* Files */}
             {
-              experience.files.map(file => (
+              education.files.map(file => (
                 <Grid key={file.title} item container direction='column' alignItems='center' spacing={1}>
                   <Grid item>
                     <Typography
@@ -232,7 +206,7 @@ export default function Experience({ experience }: ExperiencePageProps) {
                   </Grid>
                   <Grid item>
                     <ImageLink>
-                      <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${experience.title} - ${file.title}`}>
+                      <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${education.title} - ${file.title}`}>
                         <img src={file.thumbnail} className={classes.fileImage} />
                       </a>
                     </ImageLink>
@@ -247,11 +221,11 @@ export default function Experience({ experience }: ExperiencePageProps) {
                 <Typography
                   className={classes.rightAreaTitle}
                 >
-                  {experience.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
+                  {education.projects.length > 1 ? <>Key Projects</> : <>Key Project</>}
                 </Typography>
               </Grid>
               {
-                experience.projects.map(project => (
+                education.projects.map(project => (
                   <Grid key={project.title} item container direction='column' alignItems='center' spacing={1} className={classes.project}>
                     <Grid item>
                       <Typography
@@ -264,10 +238,10 @@ export default function Experience({ experience }: ExperiencePageProps) {
                     <Grid item>
                       <ImageLink exitOnMount>
                         <Link href={`/projects/${project.slug}`}>
-                          <a aria-label={`${experience.title} - ${project.title}`}>
+                          <a aria-label={`${education.title} - ${project.title}`}>
                             <img 
                               src={(theme.palette.type === 'dark') && project.darkModeImage || project.image} 
-                              alt={`${experience.title} - ${project.title}`}
+                              alt={`${education.title} - ${project.title}`}
                               className={classes.fileImage} 
                             />
                           </a>
@@ -289,8 +263,8 @@ export default function Experience({ experience }: ExperiencePageProps) {
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
   
-  const paths = Object.keys(experiences).map(experienceSlug => ({
-    params: {slug: experienceSlug},
+  const paths = Object.keys(educations).map(educationSlug => ({
+    params: {slug: educationSlug},
   }))
 
   return {
@@ -301,22 +275,21 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
 
-  const experience = experiences[ctx.params.slug as string]
+  const education = educations[ctx.params.slug as string]
   
   const data = {
     slug: ctx.params.slug,
-    ...experience,
+    ...education,
     projects: Object.entries(projects).filter(
-      (project) => (project[1] as ProjectData).experience === ctx.params.slug
+      (project) => (project[1] as ProjectData).education === ctx.params.slug
     ).map(
-      (project) => ({ slug: project[0], ...project[1]})
+      project => ({ slug: project[0], ...project[1]})
     ),
-    skills: experience.skills.map(skill => skills[skill] || {}),
   }
 
   return {
     props: {
-      experience: data,
+      education: data,
     }
   }
 }

@@ -13,7 +13,6 @@ import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import MenuItem from '@material-ui/core/MenuItem'
 import clsx from 'clsx'
-// import { useColorModeValue, useMediaQuery, Grid, GridItem, Text, Flex, Select } from '@chakra-ui/react'
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {

@@ -1,7 +1,12 @@
 export interface ExperienceProps {
-    slug: string;
-    title: string; 
-  }
+  slug: string;
+  title: string; 
+}
+
+export interface EducationProps {
+  slug: string;
+  title: string;
+}
   
 export interface SkillCategoryProps {
   slug: string;
@@ -22,6 +27,11 @@ export interface FileProps {
   thumbnail: string;
 }
 
+export interface TypeProps {
+  slug: string;
+  title: string;
+}
+
 export interface TeammateProps {
   slug: string;
   name: string;
@@ -38,10 +48,12 @@ export interface ProjectData {
   endDate: string;
   codeUrl: string;
   projectUrl: string;
-  experience: string;
+  experience?: string;
+  education?: string;
   skillsToShow: number;
   skills: string[];
   files: FileProps[];
+  type: TypeProps;
 }
 
 export interface ProjectProps {
@@ -56,9 +68,10 @@ export interface ProjectProps {
   codeUrl: string;
   projectUrl: string;
   experience: ExperienceProps;
+  education: EducationProps;
   skillsToShow: number;
   skills: SkillProps[];
   files: FileProps[];
+  type: TypeProps;
   teammates?: TeammateProps[]; 
 }
-  

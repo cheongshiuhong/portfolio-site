@@ -1,5 +1,4 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { useRouter } from 'next/router'
 import Link  from'next/link'
 import Error from 'next/error'
 import CustomHead from '@/components/CustomHead'
@@ -8,6 +7,7 @@ import ImageLink from '@/components/ImageLink'
 import { ProjectProps } from '@/interfaces/projects'
 import { projects } from '@/data/projects'
 import { experiences } from '@/data/experiences'
+import { educations } from '@/data/educations'
 import { skills } from '@/data/skills'
 import { teammates } from '@/data/teammates'
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
@@ -368,7 +368,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const data = {
     slug: ctx.params.slug,
     ...project,
-    experience: {slug: project.experience, ...(experiences[project.experience] || {})},
+    experience: project.experience ? {slug: project.experience, ...(experiences[project.experience] || {})} : {},
+    education: project.education ? {slug: project.education, ...(educations[project.education] || {})} : {},
     skills: project.skills.map(skill => skills[skill] || {}),
   }
 
