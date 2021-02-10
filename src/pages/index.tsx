@@ -128,7 +128,7 @@ export default function Home() {
           </Typography>
           <Typography 
             component='span' 
-            onClick={() => {router.push({pathname: '/projects', query: {tag: 'math'}})}}
+            onClick={() => {router.push({pathname: '/projects', query: {tag: 'mathstats'}})}}
             className={classes.interestText}
             >
             Math
