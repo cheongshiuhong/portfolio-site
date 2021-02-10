@@ -244,7 +244,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                   </Grid>
                 ))
               }
-              <Grid item>
+              {/* <Grid item>
                 <a href='https://blog.roncheong.me' target='_blank' rel='noreferrer'>
                   <Typography 
                     align='left'
@@ -253,7 +253,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                     &gt;&nbsp;Blog
                   </Typography>
                 </a>
-              </Grid>
+              </Grid> */}
 
             </Grid>
 

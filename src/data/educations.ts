@@ -3,12 +3,12 @@ export const educations = {
     title: 'Bachelor of Science, Major in Finance, Minor in Math @ SUSS',
     subtitle: 'First-Class Honours — CGPA: 4.65 / 5.00',
     description: `
-      📚 𝗔𝗰𝗮𝗱𝗲𝗺𝗶𝗰 𝗔𝗰𝗵𝗶𝗲𝘃𝗲𝗺𝗲𝗻𝘁𝘀 <br>
+      📚 <strong>Academic Achievements</strong> <br>
       Dean's Academic Achievers List for Academic Excellence AY2018/2019 <br>
       Valedictorian Recipient of Chettiar's Temple Society Scholarship Awards 2020 <br>
       SUSS Full Time Scholarship 2020<br>
       <br>
-      🔑 𝗞𝗲𝘆 𝗔𝗽𝗽𝗼𝗶𝗻𝘁𝗺𝗲𝗻𝘁𝘀 <br>
+      🔑 <strong>Key Appointments</strong> <br>
       Investment Interest Group Executive Committee <br>
       Ambassador for Marketing Campaigns <br>
       <br>
@@ -50,7 +50,15 @@ export const educations = {
   'columbia-university-financial-engineering-risk-management-course': {
     title: 'Financial Engineering & Risk Management Part 1 on Coursera',
     subtitle: 'Columbia University',
-    description: ``,
+    description: `
+      Interest Rates and Fixed Income Instruments <br>
+      Floating Rate Bonds and Term Structure of Interest Rates <br>
+      Forwards, Swaps, Futures, Options <br>
+      Binomial Model for Options Pricing <br>
+      Term Structure Lattice Models & Calibration &mdash; Black-Derman-Toy Model <br>
+      Defaultable Bonds <br>
+      Mortgage-Backed Securities <br>
+    `,
     image: '/media/images/coursera_logo.jpg',
     startDate: 'Jun 2020',
     endDate: 'Jun 2020',
@@ -60,20 +68,17 @@ export const educations = {
         title: 'Course Certificate',
         url: '/media/files/Coursera_Financial_Engineering_&_Risk_Management_Certificate.pdf',
         thumbnail: '/media/images/coursera_financial_engineering_&_risk_management_certificate.png',
-      }
+      },
     ],
   },
   'fudan-university-international-summer-programme': {
     title: 'International Summer Programme @ Fudan University',
     subtitle: 'GPA: 3.58 / 4.00',
     description: `
-      GPA: 3.58 / 4.00
-      <br>
-      International Trade - A
-      <br>
-      International Finance - B+
-      <br>
-      Chinese Kungfu - B+
+      GPA: 3.58 / 4.00 <br>
+      International Trade - A <br>
+      International Finance - B+ <br>
+      Chinese Kungfu - B+ <br>
     `,
     image: '/media/images/fudan_university_logo.jpg',
     startDate: 'Jul 2019',
@@ -85,7 +90,9 @@ export const educations = {
     title: 'Mathematics for Machine Learning Specialisation on Coursera',
     subtitle: 'Imperial College London',
     description: `
-      Linear Algebra, Multivariate Calculus, Principal Component Analysis
+      Linear Algebra <br>
+      Multivariate Calculus <br>
+      Principal Component Analysis <br>
     `,
     image: '/media/images/coursera_logo.jpg',
     startDate: 'Jul 2019',
@@ -118,7 +125,11 @@ export const educations = {
     title: 'Deep Learning Specialisation on Coursera',
     subtitle: 'deeplearning.ai',
     description: `
-    Neural Networks and Deep Learning, Improving Deep Neural Networks, Structuring Machine Learning Projects, Convolutional Neural Networks, Sequence Models
+      Neural Networks and Deep Learning <br>
+      Improving Deep Neural Networks <br>
+      Structuring Machine Learning Projects <br>
+      Convolutional Neural Networks <br>
+      Sequence Models <br>
     `,
     image: '/media/images/coursera_logo.jpg',
     startDate: 'Jun 2019',

@@ -102,7 +102,9 @@ export const projects = {
   'modern-portfolio-theory-sig': {
     title: 'Modern Portfolio Theory Demonstration',
     subtitle: 'Prepared for SUSS Investment Interest Group',
-    description: 'Mean variance optimisation, simulation',
+    description: `
+      Prepared as educational material for group members to demonstrate modern portfolio theory and the notion of diversification with historical data.
+    `,
     image: '/media/images/mpt_sig.png',
     startDate : 'Mar 2020',
     endDate: 'Mar 2020',
@@ -123,7 +125,10 @@ export const projects = {
     title: 'CFA National Research Challenge 2020',
     subtitle: 'National Finalist',
     description: `
-      Valuation and stock pitch of subject company SGX (Ticker: S68). DuPont analysis, DCF Model, bottom-up Beta estimation with Hamada's unlevering of comparables.
+      Valuation and stock pitch of subject company SGX (Ticker S68).
+      Key analyses include DuPont, Porter 5, SWOT and PESTLE. 
+      Valuation done with a blended approach comprising DCF & Relative methodologies with Football Field & Sensitivity analysis and Monte Carlo simulation.
+      WACC estimated with bottom-up Beta through Hamada's unlevering of comparables.
     `,
     image: '/media/images/cfa_presenting.jpg',
     startDate: 'Dec 2019',
@@ -134,6 +139,7 @@ export const projects = {
     skillsToShow: 3,
     skills: [
       'equity-valuation',
+      'vba',
     ],
     files: [
       {
@@ -158,7 +164,9 @@ export const projects = {
     title: 'McGill International Portfolio Challenge 2019',
     subtitle: 'International Finalist',
     description: `
-      Took part in the McGill International Portfolio Competition, being one of the teams invited to Montreal, Canada among 87 teams worldwide from renowned universities like Yale and Sydney.
+      Took part in the McGill International Portfolio Competition, 
+      being one of the teams invited to Montreal, Canada 
+      among 87 teams worldwide from renowned universities like Yale and Sydney.
     `,
     image: '/media/images/mcgill_team.jpg',
     startDate: 'Sep 2019',

@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   },
   rightAreaTitle: {
-    fontSize: '14pt',
+    fontSize: '13pt',
     fontWeight: 'bold',
   },
   fileImage: {

@@ -141,5 +141,10 @@ export const skills = {
     title: 'SPSS',
     category: skillCategories.tech,
     icon: '/media/images/spss_logo.png',
-  }
+  },
+  'vba': {
+    title: 'VBA',
+    category: skillCategories.tech,
+    icon: '/media/images/vba_logo.png',
+  },
 }
