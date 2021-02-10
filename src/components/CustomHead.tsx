@@ -24,11 +24,11 @@ export default function CustomHead({ metaTitle, metaDescription, metaImage='', }
     <Head>
       <title>{baseTitle + metaTitle}</title>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <meta name='description' content={metaDescription + baseDescription} />
       {
         Boolean(metaImage) && 
         <meta property='og:image' content={metaImage} />
       }
+      <meta name='description' content={metaDescription + baseDescription} />
     </Head>
   )
 }
