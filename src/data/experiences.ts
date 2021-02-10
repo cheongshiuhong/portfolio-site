@@ -25,7 +25,7 @@ export const experiences = {
     `,
     image: '/media/images/shopee_logo.jpg',
     startDate: 'Jul 2020',
-    endDate: 'Feb 2020',
+    endDate: 'Feb 2021',
     skillsToShow: 3,
     skills: [
       'python',

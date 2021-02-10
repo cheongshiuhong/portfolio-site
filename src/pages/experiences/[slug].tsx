@@ -123,6 +123,7 @@ export default function Experience({ experience }: ExperiencePageProps) {
       <CustomHead
         metaTitle={experience.title}
         metaDescription={`${experience.title} ${experience.subtitle}`}
+        metaImage={experience.image}
       />
       <Grid 
         container

@@ -112,6 +112,7 @@ export default function Project({ project }: ProjectPageProps) {
       <CustomHead
         metaTitle={project.title}
         metaDescription={`${project.title} ${project.subtitle}`}
+        metaImage={project.image}
       />
       <Grid 
         container
