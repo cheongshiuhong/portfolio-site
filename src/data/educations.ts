@@ -37,15 +37,26 @@ export const educations = {
       &bull; <strong>HRM203</strong> &mdash; Human Behaviour in Organisations <br>
       &bull; <strong>LOG202</strong> &mdash; Managing Operations <br>
       &bull; <strong>MKT202</strong> &mdash; Marketing Managment <br>
-      &bull; <strong>SCO399</strong> &mdash; Design-X <br>
       &bull; <strong>SCO101</strong> &mdash; Why Do Good? <br>
+      &bull; <strong>SCO399</strong> &mdash; Design-X <br>
     `,
     image: '/media/images/suss_logo.jpg',
     darkModeImage: '/media/images/suss_logo_dark.jpg',
     startDate: 'Jul 2018',
     endDate: 'May 2022',
     url: '',
-    files: [],
+    files: [
+      {
+        title: 'SUSS Scholarship',
+        url: '/media/images/suss_scholarship.jpg',
+        thumbnail: '/media/images/suss_scholarship.jpg',
+      },
+      {
+        title: 'Dean\'s List AY18/19',
+        url: '/media/images/suss_deans_list_1819.jpg',
+        thumbnail: '/media/images/suss_deans_list_1819.jpg',
+      },
+    ],
   },
   'columbia-university-financial-engineering-risk-management-course': {
     title: 'Financial Engineering & Risk Management Part 1 on Coursera',

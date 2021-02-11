@@ -17,6 +17,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Switch from '@material-ui/core/Switch'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import Slide from '@material-ui/core/Slide'
 
 const appBarHeight = 50
 const drawerWidth = 320
@@ -123,7 +124,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
-    })
+    }),
   },
   mainXl: {
     // Let alignItems center handle 
@@ -131,7 +132,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     // maxHeight: '100vh',
     // marginTop: 0,
     // paddingTop: 0,
-  }
+  },
 }))
 
 interface LayoutProps {
@@ -159,15 +160,10 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
         {/* NavBar */}
         {
           (drawerPersistent === false) &&
-          <motion.div
-            initial={{ y: -200 }}
-            animate={{ y: -50 }}
-            exit={{ y: -200 }}
-            transition={{ duration: .3 }}
-          >
+          <Slide direction='down' in={drawerPersistent === false} mountOnEnter unmountOnExit timeout={500}>
             <AppBar
               position='fixed'
-            >
+              >
               <Toolbar className={classes.toolbar}>
                 <Grid 
                   container
@@ -182,7 +178,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                     spacing={2}
                     xs={9}
                     className={classes.appbar__darkMode}
-                  >
+                    >
                     <FormGroup>
                       <FormControlLabel
                         labelPlacement='start'
@@ -218,7 +214,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                 </Grid>
               </Toolbar>
             </AppBar>
-          </motion.div>
+          </Slide>
         }
 
         {/* Drawer */}
