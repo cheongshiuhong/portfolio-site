@@ -9,8 +9,8 @@ export const educations = {
       &bull; SUSS Full Time Scholarship 2020<br>
       <br>
       🔑 <strong>Key Appointments</strong> <br>
-      &bull;Investment Interest Group Executive Committee <br>
-      &bull;Ambassador for Marketing Campaigns <br>
+      &bull; Investment Interest Group Executive Committee <br>
+      &bull; Ambassador for Marketing Campaigns <br>
       <br>
       ⭐️⭐️⭐️ <strong>Highest Distinctions (A+)</strong>: <br>
       &bull; <strong>ACC201</strong> &mdash; Financial Accounting <br> 
@@ -22,7 +22,7 @@ export const educations = {
       &bull; <strong>FIN353</strong> &mdash; Portfolio Management <br> 
       &bull; <strong>MTH107</strong> &mdash; Calculus I <br> 
       &bull; <strong>MTH207</strong> &mdash; Linear Algebra <br> 
-      &bull; <strong>MTH208</strong> &mdash;Advanced Linear Algebra <br> 
+      &bull; <strong>MTH208</strong> &mdash; Advanced Linear Algebra <br> 
       &bull; <strong>MTH305</strong> &mdash; Principles of Applied Probability <br> 
       &bull; <strong>MTH306</strong> &mdash; Further Applied Probability <br> 
       <br>

@@ -99,6 +99,7 @@ export default function Home() {
       <CustomHead 
         metaTitle='Home'
         metaDescription='home page download resume'
+        metaImage='/media/images/shiuhong.jpg'
       />
       <Grid container direction='column' alignItems='center' className={classes.root}>
         

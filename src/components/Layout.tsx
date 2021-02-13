@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '11pt',
     fontWeight: 'bold',
   },
-  drawer__content__footer__text__stack: {
+  drawer__content__footer__text__contact: {
     color: theme.palette.secondary.light,
     fontSize: '9.5pt',
   },
@@ -314,8 +314,8 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography className={classes.drawer__content__footer__text__stack}>
-                  Next.js, Typescript, Material-UI
+                <Typography className={classes.drawer__content__footer__text__contact}>
+                  email: cheongshiuhong96@gmail.com
                 </Typography>
               </Grid>
             </Grid>
