@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Head from 'next/head'
 import { AppProps } from 'next/app'
 import Cookies from 'js-cookie'
 import Layout from '@/components/Layout'
@@ -28,20 +27,15 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <title>Shopee DSMS</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      </Head>
-        <ThemeProvider theme={darkMode ? themeDark : themeDefault}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Layout 
-            setDarkMode={setDarkMode}
-          >
-            <Component {...pageProps} />
-          </Layout>
-        </ThemeProvider>
-
+      <ThemeProvider theme={darkMode ? themeDark : themeDefault}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Layout 
+          setDarkMode={setDarkMode}
+        >
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }
