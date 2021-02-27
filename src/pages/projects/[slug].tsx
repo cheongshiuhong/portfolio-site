@@ -1,9 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link  from'next/link'
 import Error from 'next/error'
+import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
 import Badge from '@/components/Badge'
 import ImageLink from '@/components/ImageLink'
+import useMixpanel from '@/components/helpers/useMixpanel'
 import { ProjectProps } from '@/interfaces/projects'
 import { projects } from '@/data/projects'
 import { experiences } from '@/data/experiences'
@@ -102,6 +104,8 @@ export default function Project({ project }: ProjectPageProps) {
   const theme = useTheme()
   const classes = useStyles()
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
+  const router = useRouter()
+  const mixpanel = useMixpanel()
 
   if (typeof project === 'undefined') {
     return <Error statusCode={404} />
@@ -322,7 +326,13 @@ export default function Project({ project }: ProjectPageProps) {
                   </Grid>
                   <Grid item>
                     <ImageLink>
-                      <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${project.title} - ${file.title}`}>
+                      <a 
+                        href={file.url} 
+                        target='_blank' 
+                        rel='noreferrer' 
+                        aria-label={`${project.title} - ${file.title}`}
+                        onClick={() => mixpanel.trackFileClick(router.asPath, file.url)}  
+                      >
                         <img 
                           src={file.thumbnail} 
                           alt={`${file.title}`}
@@ -353,6 +363,7 @@ export default function Project({ project }: ProjectPageProps) {
                           target='_blank' 
                           rel='noreferrerr' 
                           aria-label={`${teammate.name}`}
+                          onClick={() => mixpanel.trackTeammateClick(router.asPath, teammate.url)}
                         >
                           <Typography className={classes.teammateName}>
                             {teammate.name}

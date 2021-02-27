@@ -241,7 +241,7 @@ export default function Layout({ children, setDarkMode }: LayoutProps) {
             >
               {
                 pages.map(page => (
-                  <Grid item>
+                  <Grid item key={page.href}>
                     <Link href={page.href}>
                       <Typography
                         align='left'

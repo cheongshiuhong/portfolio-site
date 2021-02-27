@@ -1,8 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Link  from'next/link'
 import Error from 'next/error'
+import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
 import ImageLink from '@/components/ImageLink'
+import useMixpanel from '@/components/helpers/useMixpanel'
 import { ProjectData } from '@/interfaces/projects'
 import { EducationProps } from '@/interfaces/educations'
 import { projects } from '@/data/projects'
@@ -104,6 +106,8 @@ export default function Education({ education }: EducationPageProps) {
   const theme = useTheme()
   const classes = useStyles()
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'))
+  const router = useRouter()
+  const mixpanel = useMixpanel()
 
   if (typeof education === 'undefined') {
     return <Error statusCode={404} />
@@ -207,7 +211,13 @@ export default function Education({ education }: EducationPageProps) {
                   </Grid>
                   <Grid item>
                     <ImageLink>
-                      <a href={file.url} target='_blank' rel='noreferrer' aria-label={`${education.title} - ${file.title}`}>
+                      <a 
+                        href={file.url} 
+                        target='_blank' 
+                        rel='noreferrer' 
+                        aria-label={`${education.title} - ${file.title}`}
+                        onClick={() => mixpanel.trackFileClick(router.asPath, file.url)}
+                      >
                         <img src={file.thumbnail} className={classes.fileImage} />
                       </a>
                     </ImageLink>

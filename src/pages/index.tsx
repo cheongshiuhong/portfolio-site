@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import CustomHead from '@/components/CustomHead'
 import ImageLink from '@/components/ImageLink'
+import useMixpanel from '@/components/helpers/useMixpanel'
 import { pages } from '@/data/pages'
 
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
@@ -91,6 +92,7 @@ export default function Home() {
   const theme = useTheme()
   const classes = useStyles()
   const router = useRouter()
+  const mixpanel = useMixpanel()
 
   const drawerPersistent = useMediaQuery(theme.breakpoints.up('lg'))
 
@@ -169,6 +171,7 @@ export default function Home() {
           <Button
             variant='contained'
             className={classes.resumeButton}
+            onClick={() => mixpanel.track('resumeDownload', {from: router.asPath})}
           >
             <a download='' href='/media/files/ShiuHong_Cheong_Resume.pdf'>
                 Download Resume
