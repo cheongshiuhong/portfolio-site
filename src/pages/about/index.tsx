@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import CustomHead from '@/components/CustomHead'
 import { useTheme, Theme, makeStyles } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
@@ -61,4 +62,10 @@ export default function About() {
       </Grid>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {}
+  }
 }

@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }))
 
-export default function Home() {
+export default function Home({}) {
 
   const theme = useTheme()
   const classes = useStyles()
@@ -206,4 +206,10 @@ export default function Home() {
       
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {}
+  }
 }
