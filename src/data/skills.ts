@@ -147,4 +147,24 @@ export const skills = {
     category: skillCategories.tech,
     icon: '/media/images/vba_logo.png',
   },
+  'serverless': {
+    title: 'Serverless',
+    category: skillCategories.tech,
+    icon: '/media/images/serverless.png',
+  },
+  'aws-appsync': {
+    title: 'AWS AppSync',
+    category: skillCategories.tech,
+    icon: '/media/images/appsync.png',
+  },
+  'elasticsearch': {
+    title: 'Elasticsearch',
+    category: skillCategories.tech,
+    icon: '/media/images/elasticsearch.png',
+  },
+  'jest': {
+    title: 'Jest',
+    category: skillCategories.tech,
+    icon: '/media/images/jest.png',
+  },
 }

@@ -1,16 +1,20 @@
 export const experiences = {
   'solar-ai-software-engineering-internship': {
     title: 'Software Engineer Intern @ Solar AI Technologies',
-    subtitle: 'TBD',
+    subtitle: 'Full-stack software development',
     description : `TBD`,
     image: '/media/images/solar_ai_logo.jpg',
     startDate: 'Feb 2021',
-    endDate: 'Aug 2021',
+    endDate: 'Aug 2021 (Expected)',
     skillsToShow: 3,
     skills: [
+      'serverless',
       'react-js',
       'next-js',
-      // 'graphql',
+      'graphql',
+      'aws-appsync',
+      'elasticsearch',
+      'jest',
     ],
     files: [],
   },

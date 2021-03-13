@@ -1,8 +1,4 @@
 export const projectTypes = {
-  // 'personal': {
-  //   slug: 'personal',
-  //   title: 'Personal Projects',
-  // },
   'academic': {
     slug: 'academic',
     title: 'Academic Projects',
@@ -22,10 +18,10 @@ export const projects = {
     title: 'Full Stack Web Application',
     subtitle: 'Built for Shopee\'s Regional Finance Team - Image Intentionally Blurred',
     description: `
-      Developed from scratch with <strong>docker-compose</strong> to containerize the backend, celery workers, scheduler, redis broker and frontend. 
-      Backend built with <strong>Django</strong>, including a management system for the team\'s use and <strong>REST API</strong> for the frontend. 
-      Automations done by <strong>Celery</strong> workers for asynchronous execution, including tasks like scraping and processing data from multiple sources and emailing. 
-      Frontend built with <strong>Next.js</strong> (<strong>React.js</strong>), styled with <strong>Material-UI</strong> for organisation-wide users. (Image intentionally blurred)
+      Developed from scratch with <strong>docker-compose</strong> to containerize the backend, celery workers, scheduler, redis broker, frontend and nginx. 
+      Backend built with <strong>Django</strong>, featuring a management system for the team\'s use and <strong>REST API</strong> for the frontend. 
+      Automations performed by <strong>Celery</strong> workers for asynchronous execution, including tasks like emailing, scraping and processing data from multiple sources. 
+      Frontend built with <strong>Next.js</strong> (<strong>React.js</strong>), styled with <strong>Material-UI</strong>. (Image intentionally blurred)
     `,
     image: '/media/images/fswa_blurred_light.png',
     darkModeImage: '/media/images/fswa_blurred_dark.png',

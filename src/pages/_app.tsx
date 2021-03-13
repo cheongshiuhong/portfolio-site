@@ -30,7 +30,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, [darkMode])
 
   useEffect(() => {
-    console.log('track')
     mixpanel.trackNav(router.asPath, router.query)
   }, [router])
 
